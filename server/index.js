@@ -9,13 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 // Connect MongoDB
-mongoose.connect(
-  "mongodb+srv://242210011:ishruti@cluster0.ahhs7.mongodb.net/privacydb",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Privacy-preserving query processing (mock logic)
 function processQuery(queryStr) {
