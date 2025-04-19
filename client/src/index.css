@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#one {
+  position: fixed;
+  right: 10px;
+  align-self: anchor-center;
+  width: 50vh;
+}
+
+#two {
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+#three {
+  height: 36vh;
+  position: fixed;
+  left: 20px;
+}
+
+/* .bg-main {
+  background-image: url("/images/2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+} */

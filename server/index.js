@@ -2,16 +2,20 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const User = require("./models/User");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // Connect MongoDB
-mongoose.connect(MONGODB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://242210011:ishruti@cluster0.ahhs7.mongodb.net/privacydb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // Privacy-preserving query processing (mock logic)
 function processQuery(queryStr) {

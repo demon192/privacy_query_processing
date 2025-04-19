@@ -18,7 +18,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+    <div
+      className="min-h-screen flex flex-col items-center p-6 bg-main"
+      style={{
+        backgroundImage: 'url("/images/2.png")',
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundColor: "white",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <h1 className="text-3xl font-bold mb-6">Privacy-Preserving Query Demo</h1>
       <textarea
         className="w-full max-w-xl p-4 border rounded mb-4"
@@ -42,6 +51,9 @@ function App() {
           {JSON.stringify(results, null, 2)}
         </pre>
       </div>
+      {/* <img src="./images/2.png" id="two" /> */}
+      <img src="./images/1.jpg" id="one" />
+      <img src="./images/3.avif" id="three" />
     </div>
   );
 }
